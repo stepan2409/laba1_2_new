@@ -62,7 +62,9 @@ namespace laba1_2
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -85,6 +87,7 @@ namespace laba1_2
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
@@ -439,6 +442,7 @@ namespace laba1_2
             // 
             // numericUpDown2
             // 
+            this.numericUpDown2.DecimalPlaces = 5;
             this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numericUpDown2.Location = new System.Drawing.Point(442, 178);
             this.numericUpDown2.Minimum = new decimal(new int[] {
@@ -447,11 +451,12 @@ namespace laba1_2
             0,
             -2147483648});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 29);
+            this.numericUpDown2.Size = new System.Drawing.Size(170, 29);
             this.numericUpDown2.TabIndex = 7;
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.DecimalPlaces = 5;
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numericUpDown1.Location = new System.Drawing.Point(442, 104);
             this.numericUpDown1.Minimum = new decimal(new int[] {
@@ -460,12 +465,14 @@ namespace laba1_2
             0,
             -2147483648});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 29);
+            this.numericUpDown1.Size = new System.Drawing.Size(170, 29);
             this.numericUpDown1.TabIndex = 6;
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.label7);
+            this.tabPage5.Controls.Add(this.textBox4);
+            this.tabPage5.Controls.Add(this.numericUpDown8);
+            this.tabPage5.Controls.Add(this.label19);
             this.tabPage5.Controls.Add(this.button3);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
@@ -475,14 +482,34 @@ namespace laba1_2
             this.tabPage5.Text = "Задание 5";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // textBox4
             // 
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(13, 68);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(456, 219);
-            this.label7.TabIndex = 1;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox4.Location = new System.Drawing.Point(16, 72);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox4.Size = new System.Drawing.Size(931, 480);
+            this.textBox4.TabIndex = 4;
+            this.textBox4.WordWrap = false;
+            // 
+            // numericUpDown8
+            // 
+            this.numericUpDown8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDown8.Location = new System.Drawing.Point(282, 23);
+            this.numericUpDown8.Name = "numericUpDown8";
+            this.numericUpDown8.Size = new System.Drawing.Size(120, 32);
+            this.numericUpDown8.TabIndex = 3;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(234, 25);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(53, 26);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "N = ";
             // 
             // button3
             // 
@@ -652,6 +679,8 @@ namespace laba1_2
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
@@ -683,7 +712,6 @@ namespace laba1_2
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button4;
@@ -708,6 +736,9 @@ namespace laba1_2
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 

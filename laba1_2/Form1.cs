@@ -18,11 +18,11 @@ namespace laba1_2
   
     private void button2_Click(object sender, EventArgs e)
     {
-            int a, b;
-            a = (int)this.numericUpDown1.Value;
-            b = (int)this.numericUpDown2.Value;
+            double a, b;
+            a = Math.Ceiling((double)this.numericUpDown1.Value);
+            b = Math.Floor((double)this.numericUpDown2.Value);
             string result = "";
-            for (int i = a; i <=b; i++)
+            for (int i = (int)a; i <=b; i++)
             {
                 if (i % 3 == 0)
                 {
@@ -54,8 +54,9 @@ namespace laba1_2
 
         private void button3_Click(object sender, EventArgs e)
         {
+            int n = (int)numericUpDown8.Value;
             string Result = "";
-            for (int i = 5; i>0; i--)
+            for (int i = n+1; i>0; i--)
             {
                 for (int j = 0; j<i; j++)
                 {
@@ -63,7 +64,7 @@ namespace laba1_2
                 }
                 Result += "\r\n";
             }
-            label7.Text = Result;
+            textBox4.Text = Result;
         }
 
      
@@ -118,6 +119,13 @@ namespace laba1_2
             double a = (double)numericUpDown3.Value;
             double b = (double)numericUpDown4.Value;
             double h = (double)numericUpDown5.Value;
+
+            if (a >= b)
+            {
+                var mab = MessageBox.Show("Ошибка ввода: A должно быть МЕНЬШЕ чем B", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string result = "  #|         x|      f(x)\r\n" + "".PadRight(25, '-') + "\r\n";
             double x = a;
             for (int lineNume = 1; x <= b; x += h, lineNume++)
